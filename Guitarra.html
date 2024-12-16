@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitarras</title>
+    <style> 
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: rgb(236, 183, 103);
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+
+        .main {
+            background-color: rgb(243, 223, 187);
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: rgb(37, 36, 33);
+            color: white;
+            border-radius: 10px;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .footer {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 50px;
+        }
+
+        .total {
+            font-size: 18px;
+            margin: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 5px 10px;
+            margin-top: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: lightgray;
+        }
+        img {
+            width: 50%;
+            height: 50%;
+        }
+        .icono-carrito {
+            width:3% ;
+            height: 3%;
+        }
+        .inicio {
+            width: 100%;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Modelos de guitarras</h1>
+    </div>
+
+    <div class="total">
+        Total del carrito: <span id="total">0</span> $
+        <img src="https://cdn-icons-png.flaticon.com/512/3050/3050238.png" class="icono-carrito" >
+    </div>
+
+    <div class="main">
+        <div class="card">
+            Guitarra electrica negra<br>Precio: $100 
+            <button onclick="agregarCarrito(100)">Agregar al carrito</button>
+            <button onclick="eliminarCarrito(100)">Eliminar de carrito</button>
+            <img src="https://www.lesluthiers.org/getfoto.php?ID=2928" alt="Guitarra electrica negra">
+        </div>
+        <div class="card">
+            Guitarra electrica marron<br>Precio: $350
+            <button onclick="agregarCarrito(350)">Agregar al carrito</button>
+            <button onclick="eliminarCarrito(350)">Eliminar de carrito</button>
+            <img src="https://factorysound.cl/30367-medium_default/V6SSB.jpg" alt="guitarra electrica marron">
+        </div>
+        <div class="card">
+            Guitarra española<br>Precio: $150 
+            <button onclick="agregarCarrito(150)">Agregar al carrito</button>
+            <button onclick="eliminarCarrito(150)">Eliminar de carrito</button>
+            <img src="https://www.laguitarreria.es/9098-large_default/guitarra-clasica-admira-malaga-electrificada-fishman-serie-conservatorio.jpg" alt="Guitarra electrica roja">
+        </div>
+        <div class="card">
+            Guitarra acustica<br>Precio: $200 
+            <button onclick="agregarCarrito(200)">Agregar al carrito</button>
+            <button onclick="eliminarCarrito(200)">Eliminar de carrito</button>
+            <img src="https://factorysound.cl/34055-large_default/V300VSB.jpg" alt="Guitarra acustica">
+        </div>
+        <div class="card">
+            Guitarra electrica metalica<br>Precio: $300 
+            <button onclick="agregarCarrito(300)">Agregar al carrito</button>
+            <button onclick="eliminarCarrito(300)">Eliminar de carrito</button>
+            <img src="https://www.musimaster.com/37378-home_default/jackson-js-series-king-v-js32-gloss-black.jpg" alt="Guitarra electrica metalica">
+        </div>
+        <div class="card">
+            Guitarra electroacustica<br>Precio: $250 
+            <button onclick="agregarCarrito(250)">Agregar al carrito</button>
+            <button onclick="eliminarCarrito(250)">Eliminar de carrito</button>
+            <img src="https://www.guitar-market.com/wp-content/uploads/2024/06/guit-11-3.png" alt="Guitarra electroacustica">
+        </div>
+    </div>
+
+    <div class="footer" onclick="location.href='file:///C:/Visula%20Studio/Globant/Manu.html'">
+        Volver al inicio
+    </div>
+
+    <script>
+        let total = 0;
+
+        function agregarCarrito(precio) {
+            total += precio;
+            document.getElementById('total').textContent = total;
+        }
+
+        function eliminarCarrito(precio) {
+            total -= precio;
+            if (total < 0) total = 0; 
+            document.getElementById('total').textContent = total;
+        }
+    </script>
+    <div class="Inicio" onclick="location.href= 'file:///C:/Visula%20Studio/Globant/Manu.html'"; >
+        <title>Inicio</title>
+    </div>
+</body>
+</html>
+
+
